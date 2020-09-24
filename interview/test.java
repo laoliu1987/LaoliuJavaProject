@@ -18,6 +18,7 @@ public class test{
                 length--;
                 continue;
             }
+
         }
         return strBuilder.toString();
     }
