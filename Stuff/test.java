@@ -7,6 +7,7 @@ public class test {
         int[] arr1=bb.sort(arr);
         for(int a:arr1){
             System.out.println(a);
+
         }
     }
 }

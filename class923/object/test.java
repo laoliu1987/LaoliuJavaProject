@@ -1,7 +1,5 @@
 package class923.object;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-
 public class test {
     public static void main(String[] args) {
         Object obj=new test();
