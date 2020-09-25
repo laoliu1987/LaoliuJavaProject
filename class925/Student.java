@@ -10,6 +10,19 @@ public class Student {
     }
 
     public boolean equals(Object obj) {
+        //比较类型是否相等
+        if(null == obj){
+            return false;
+        }
+        //比较地址是否相等
+        if(this == obj){
+            return true;
+        }
+        //判断是否是同一个类传递过来的对象
+        if(this.getClass()!=obj.getClass()){
+            return false;
+        }
+        //对象的比较
         Student target = (Student) obj;
         if (
                 (this.name.equals(target.getName()))&&
