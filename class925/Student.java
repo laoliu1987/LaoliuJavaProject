@@ -1,7 +1,7 @@
 package class925;
 
 public class Student {
-
+    //重写equals方法进行对象比较
     private String name;
     private int age;
     private String sex;
@@ -11,10 +11,12 @@ public class Student {
 
     public boolean equals(Object obj) {
         Student target = (Student) obj;
-        boolean r = this.name.equals(target.getName());
-        boolean s = this.age == target.getAge();
-        boolean t = this.sex.equals(target.getSex());
-        if (r && s && t) {
+        if (
+                (this.name.equals(target.getName()))&&
+                (this.age == target.getAge())&&
+                this.sex.equals(target.getSex())
+        )
+        {
             return true;
         }
         return false;
