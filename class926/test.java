@@ -17,9 +17,11 @@ public class test {
         }catch(Exception e){
             //当try中产生异常时如何处理异常
 //            System.out.println("--FileNotFoundException--");
+            e.printStackTrace();
         }finally {
             //此处代码一定会执行
             System.out.println("--end--");
         }
     }
+
 }
