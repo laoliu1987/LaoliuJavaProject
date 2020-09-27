@@ -1,4 +1,4 @@
-package class927Exception;
+package class927;
 
 public class LoginException extends RuntimeException{
     private  static final long serialVersionUID=1L;
@@ -8,4 +8,5 @@ public class LoginException extends RuntimeException{
     public LoginException(String message){
         super(message);
     }
+
 }

@@ -1,4 +1,4 @@
-package class927Exception;
+package class927;
 
 public class zdytest {
     public static void main(String[] args)  {
