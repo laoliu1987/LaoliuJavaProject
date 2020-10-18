@@ -2,7 +2,7 @@ package ClassAll.class923.proxy;
 
 public class ProxyHouse implements IHouse{
     private IHouse house;
-    public ProxyHouse(){};
+    public ProxyHouse(){}
     public ProxyHouse(IHouse house){
         this.house=house;
     }
