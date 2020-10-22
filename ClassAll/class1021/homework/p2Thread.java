@@ -1,15 +1,17 @@
 package ClassAll.class1021.homework;
 
-public class PushThread extends Thread{
+public class p2Thread extends Thread{
 
     private  MyStack ms;
-    public PushThread(MyStack ms){
+    public p2Thread(MyStack ms){
         this.ms=ms;
     }
     @Override
     public void run() {
         //调用pop
-        ms.push('C');
+        for(int i=0;i<3;i++) {
+            ms.money += 1000;
+        }
     }
 }
 

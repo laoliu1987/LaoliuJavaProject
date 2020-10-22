@@ -3,7 +3,7 @@ package ClassAll.class1021.homework;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class MyStack {
-    char[] data = {'A','B',' '};
+    public static int money;
     //记录data中的元素个数
     /*
         当一个线程执行synchronized语句块时，当前线程会获取到指定对象的对象锁
@@ -14,27 +14,9 @@ public class MyStack {
         此线程进入锁池状态：所持状态中的线程等待获取指定对象的对象锁
         （当synchronized语句块执行完后自动释放对象锁）
      */
-    ReentrantLock lock= new ReentrantLock(true);
-    //true表示线程之间的执行时的公平原则
 
-    private  int index=2;
-    public void push(char ch){
-            lock.lock();
-            data[index] = ch;
-            index++;
-            print();
-            lock.unlock();
-    }
-    public void pop(){
-            lock.lock();
-            index--;
-            data[index] = ' ';
-            print();
-            lock.unlock();
-    }
+    //true表示线程之间的执行时的公平原则
     public void print(){
-        for(int i=0;i<index;i++){
-            System.out.println(data[i]);
-        }
+            System.out.println(money);
     }
 }

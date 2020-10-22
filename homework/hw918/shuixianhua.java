@@ -1,4 +1,4 @@
-package hw918;
+package homework.hw918;
 
 public class shuixianhua {
     public static void main(String[] args) {
