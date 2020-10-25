@@ -1,9 +1,6 @@
 package ClassAll.class1025.ioStream;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
 public class InputStreamTest {
     public static void main(String[] args) {
@@ -12,15 +9,28 @@ public class InputStreamTest {
     }
     public static void inputStream(){
         String path="C:\\Users\\老刘\\Desktop\\ab.txt";
+        File file=new File(path);
+        InputStream is = null;
         try {
-            InputStream is=new FileInputStream(path);
-            //从流中读取第一个字符，返回对应的ASCII码
-            int k=-1;
-            while((k= is.read())!=-1){
-                System.out.print((char)k);
+            is=new FileInputStream(path);
+            byte[] b =new byte[5];
+            int k=0;
+            while((k=is.read(b,1,4))!=1){
+                for(int i=1;i<k+1;i++){
+                    System.out.print((char)b[i]);
+                }
             }
+
         } catch (IOException e) {
             e.printStackTrace();
+        }finally {
+            if(null!=is){
+                try {
+                    is.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
 
     }
