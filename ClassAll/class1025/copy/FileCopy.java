@@ -1,23 +1,24 @@
 package ClassAll.class1025.copy;
 
-import ClassAll.class923.object.B;
-
 import java.io.*;
 
 public class FileCopy {
-    static final String path="C:\\Users\\老刘\\Desktop\\71771099.jpg";
+    static final File Path = new File("C:\\Users\\老刘\\Desktop\\102501-.wmv");
+    static final File pathpaste = new File("C:\\Users\\老刘\\Desktop\\10211501-.wmv");
+    static final String path="C:\\Users\\老刘\\Desktop\\102501-.wmv";
     static final String path1="C:\\Users\\老刘\\Desktop\\22222222.jpg";
     public static void main(String[] args) {
 //        test1();
-//        test2();
+        test2();
+        System.out.println(Path.getName());
     }
     public static void test2(){
         InputStream is = null ;
         try {
             long begin =System.currentTimeMillis();
-            is = new FileInputStream(path);
+            is = new FileInputStream(Path);
             BufferedInputStream bis =new BufferedInputStream(is);
-            OutputStream os =new FileOutputStream(path1);
+            OutputStream os =new FileOutputStream(pathpaste);
             BufferedOutputStream bos =new BufferedOutputStream(os);
             int k= -1;
             byte[] b =new byte[1024];
@@ -45,7 +46,9 @@ public class FileCopy {
             long begin = System.currentTimeMillis();
             int k = -1;
             byte[] b = new byte[1024];
-            while((k=is.read(b))!=-1){
+            while((k=is.read())!=-1){
+//                os.write(k+1); 对数据进行加密
+//                os.write(k^5);
                 os.write(b,0,k);
             }
             os.close();
