@@ -12,12 +12,10 @@ public class BufferedStreamTest {
         try {
             Reader r=new FileReader(path);
             BufferedReader br =new BufferedReader(r);
-            String str=null;
+            String str;
             while((str=br.readLine())!=null){
                 System.out.println(str);
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
