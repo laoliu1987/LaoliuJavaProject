@@ -30,18 +30,29 @@ public class Filetest {
         String ap=file.getAbsolutePath();
         System.out.println(ap);
 
-//        file.getFreeSpace();
-//        file.getName();
-//        file.getParent();
-//        file.getParentFile();
-//        file.getPath();
-//        file.isAbsolute();
-//        file.isDirectory();
-//        file.length();
-//        file.list();
-//        file.listFiles();
+        long freespace = file.getFreeSpace();
+        System.out.println(freespace);
+        String filename = file.getName();
+        System.out.println(filename);
+        String fileparent = file.getParent();
+        System.out.println(fileparent);
+        File fileparentfile = file.getParentFile();
+        System.out.println(fileparentfile);
+        String filepath = file.getPath();
+        System.out.println(filepath);
+        boolean isAbsolute = file.isAbsolute();
+        System.out.println(isAbsolute);
+        boolean isDirectory = file.isDirectory();
+        System.out.println(isDirectory);
+        long length = file.length();
+        System.out.println(length);
+        String[] strlist = file.list();
+        System.out.println(strlist);
+        File[] strlistfile = file.listFiles();
+        System.out.println(strlistfile);
 //        file.mkdir();
 //        file.mkdirs();
-//        file.separator;//获取当前OS的路径分隔符
+        String str = file.separator;//获取当前OS的路径分隔符
+        System.out.println(str);
     }
 }
