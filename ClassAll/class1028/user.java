@@ -1,6 +1,10 @@
 package ClassAll.class1028;
 
-public class user {
+import java.io.Serializable;
+
+public class user implements Serializable {
+
+    private static final long serialVersionUID=1L;
     private int id;
     public user(){}
     public user(int id, String name){
@@ -16,6 +20,20 @@ public class user {
         this.name = name;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     private String name;
 
+    @Override
+    public String toString() {
+        return "user{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
