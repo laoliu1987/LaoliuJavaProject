@@ -1,7 +1,5 @@
 package ClassAll.class1028;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-
 import java.io.*;
 import java.util.Scanner;
 
@@ -50,7 +48,8 @@ public class Test {
             e.printStackTrace();
         }
         //此时System.out为null 不会输出东西
-        System.out.println(System.out);
+        System.out.println(System.out);//
         System.out.println("123");
+
     }
 }
