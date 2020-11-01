@@ -1,4 +1,4 @@
-package ClassAll.class1101;
+package ClassAll.class1101.tcp;
 
 import java.io.PrintStream;
 
