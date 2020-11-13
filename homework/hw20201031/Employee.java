@@ -1,6 +1,4 @@
-package homework;
-
-import java.util.Comparator;
+package homework.hw20201031;
 
 public class Employee implements Comparable<Employee> {
     public String getName() {

@@ -13,4 +13,9 @@ public class IUser implements IGet{
         }
         return temp;
     }
+
+    @Override
+    public boolean check(User u) {
+        return false;
+    }
 }
